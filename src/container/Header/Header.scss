@@ -20,7 +20,7 @@
   height: 100%;
   flex-direction: row;
 
-  padding: 6rem 2rem 0;
+  padding: 8rem 2rem 0 2rem;
 
   @media screen and (min-width: 2000px) {
     padding-top: 8rem;
@@ -80,8 +80,8 @@
       text-align: right;
     }
 
-    p:nth-child(2){
-        font-size: 0.7rem;
+    p:nth-child(2) {
+      font-size: 0.7rem;
     }
   }
   span {
@@ -198,7 +198,7 @@
     height: 90%;
   }
 
-  @media screen and (max-width:1200px) {
+  @media screen and (max-width: 1200px) {
     margin: 2rem 0;
   }
 }
