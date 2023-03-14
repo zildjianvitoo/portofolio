@@ -1,10 +1,22 @@
 import React from "react";
 import "./Header.scss";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { images } from "../../constants";
+
+const scaleVariants = {
+  whileInView: {
+    scale: [0, 1],
+    opacity: [0, 1],
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+    },
+  },
+};
+
 const Header = () => {
   return (
-    <div className="app__header app__flex">
+    <div id="home" className="app__header app__flex">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -30,10 +42,27 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.profile} />
+        <img src={images.profile} alt="vito pic" />
+        <motion.img
+          whileInView={{ x: [-100, 0], scale: [0, 1] }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          src={images.circle}
+          alt="profile cirlce"
+          className="overlay_circle"
+        />
       </motion.div>
 
-      <motion.div></motion.div>
+      <motion.div
+        variants={scaleVariants}
+        whileInView={scaleVariants.whileInView}
+        className="app__header-circles"
+      >
+        {[images.javascript, images.react, images.sass].map((item, index) => (
+          <div className="cirlce-cmp app__flex" key={`circle-${index}`}>
+            <img src={item} alt="circles" />
+          </div>
+        ))}
+      </motion.div>
     </div>
   );
 };
