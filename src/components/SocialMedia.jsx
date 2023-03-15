@@ -1,18 +1,24 @@
 import React from "react";
 import { BsLinkedin, BsInstagram } from "react-icons/bs";
-import { FaFacebook } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const SocialMedia = () => {
   return (
     <div className="app__social">
       <div>
-        <BsLinkedin />
+        <a href="https://www.linkedin.com/in/zildjianvito/">
+          <BsLinkedin />
+        </a>
       </div>
       <div>
-        <FaFacebook />
+        <a href="wa.me/6285155470477">
+          <IoLogoWhatsapp />
+        </a>
       </div>
       <div>
-        <BsInstagram />
+        <a href="https://www.instagram.com">
+          <BsInstagram size={"2em"} />
+        </a>
       </div>
     </div>
   );
