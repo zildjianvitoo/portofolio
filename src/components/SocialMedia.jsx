@@ -11,7 +11,7 @@ const SocialMedia = () => {
         </a>
       </div>
       <div>
-        <a href="wa.me/6285155470477">
+        <a href="https://wa.me/6285155470477">
           <IoLogoWhatsapp />
         </a>
       </div>
