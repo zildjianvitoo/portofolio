@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
-import {AppWrap} from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 
 import "./About.scss";
 
@@ -15,7 +15,7 @@ const About = () => {
 
   return (
     <>
-      <h2 className="head-text" style={{ marginTop: 10 }}>
+      <h2 className="head-text">
         I Know That <span> Good Code </span> <br /> means
         <span> Good Business </span>
       </h2>
@@ -43,4 +43,8 @@ const About = () => {
   );
 };
 
-export default AppWrap(About, "about");
+export default AppWrap(
+  MotionWrap(About, "app__about"),
+  "about",
+  "app__whitebg"
+);
