@@ -142,7 +142,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       flex-direction: column;
-       li {
+      li {
         margin: 1rem;
 
         a {
@@ -158,9 +158,10 @@
             color: var(--secondary-color);
           }
         }
+      }
     }
-  }
-   @media screen and (min-width: 900px) {
+
+    @media screen and (min-width: 900px) {
       display: none;
     }
   }
