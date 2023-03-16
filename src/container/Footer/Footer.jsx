@@ -4,6 +4,7 @@ import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../client";
 import "./Footer.scss";
+import { SocialMedia } from "../../components";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -98,6 +99,7 @@ const Footer = () => {
           <h3 className="head-text">Thank you for getting in touch!</h3>
         </div>
       )}
+      <SocialMedia className="app__social-footer" />
     </>
   );
 };

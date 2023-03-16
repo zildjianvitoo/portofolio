@@ -2,9 +2,9 @@ import React from "react";
 import { BsLinkedin, BsInstagram } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
 
-const SocialMedia = () => {
+const SocialMedia = (props) => {
   return (
-    <div className="app__social">
+    <div className={`app__social ${props.className}`}>
       <div>
         <a href="https://www.linkedin.com/in/zildjianvito/">
           <BsLinkedin />
@@ -17,7 +17,7 @@ const SocialMedia = () => {
       </div>
       <div>
         <a href="https://www.instagram.com">
-          <BsInstagram size={"2em"} />
+          <BsInstagram />
         </a>
       </div>
     </div>
