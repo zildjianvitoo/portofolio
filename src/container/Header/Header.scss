@@ -203,4 +203,10 @@
   @media screen and (max-width: 1200px) {
     margin: 2rem 0;
   }
+
+  @media screen and (max-width: 500px) {
+    img {
+      right: 1.8rem;
+    }
+  }
 }
