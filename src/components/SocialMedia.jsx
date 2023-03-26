@@ -16,7 +16,7 @@ const SocialMedia = (props) => {
         </a>
       </div>
       <div>
-        <a href="https://www.instagram.com">
+        <a href="https://www.instagram.com/zildjianvitoo">
           <BsInstagram />
         </a>
       </div>
