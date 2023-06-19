@@ -11,7 +11,7 @@ const SocialMedia = (props) => {
         </a>
       </div>
       <div>
-        <a href="https://wa.me/6285155470477">
+        <a href="https://wa.me/">
           <IoLogoWhatsapp />
         </a>
       </div>
