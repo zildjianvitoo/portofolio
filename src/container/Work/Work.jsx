@@ -17,7 +17,7 @@ const Work = () => {
 
     client.fetch(query).then((data) => {
       setWorks(data);
-      setFilterWork(data);
+      setFilterWork(data.slice(1).slice(-5));
     });
   }, []);
 
