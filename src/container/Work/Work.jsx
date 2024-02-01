@@ -17,7 +17,7 @@ const Work = () => {
 
     client.fetch(query).then((data) => {
       setWorks(data);
-      setFilterWork(data.slice(1).slice(-5));
+      setFilterWork(data.slice(0, 5));
     });
   }, []);
 
@@ -29,9 +29,12 @@ const Work = () => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
       if (item === "All") {
-        setFilterWork(works.slice(1).slice(-5));
+        setFilterWork(works.slice(0, 5));
+        console.log(works.slice(0, 5));
       } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
+        setFilterWork(
+          works.filter((work) => work.tags.includes(item)).slice(0, 5)
+        );
       }
     }, 500);
   };
