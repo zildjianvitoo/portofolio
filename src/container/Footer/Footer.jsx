@@ -23,6 +23,11 @@ const Footer = () => {
   };
 
   const handleSubmit = () => {
+    if (!username || !email || !message) {
+      alert("You must fill in the field");
+      return;
+    }
+
     setLoading(true);
 
     const contact = {
@@ -55,7 +60,7 @@ const Footer = () => {
         <div className="app__footer-card">
           <img src={images.mobile} alt="phone" />
           <a href="tel:+62 851 5547 0477" className="p-text">
-            +62 851 5547 0477
+            +62 851 7673 4655
           </a>
         </div>
       </div>
